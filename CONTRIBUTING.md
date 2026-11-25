@@ -16,13 +16,4 @@ Each command runs independently as a separate CI job. Type checking uses TypeScr
 
 TypeScript 7 runs the CLI type check. The imported-props fixture uses the JavaScript Compiler API from the official `@typescript/typescript6` compatibility package.
 
-Pull request CI also checks whitespace in the committed diff. Fetch the latest base branch to run that check locally.
-
-```sh
-git fetch origin main
-git diff --check origin/main...HEAD
-```
-
-The command checks committed changes. Use `git diff --check` for unstaged changes and `git diff --cached --check` for staged changes.
-
 In the pull request, describe the scope, the reason for the change, and what you verified. Link related issues and describe any open design decisions that affect the change.
