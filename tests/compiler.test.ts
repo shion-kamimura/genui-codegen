@@ -1,4 +1,4 @@
-import ts from "typescript";
+import ts from "@typescript/typescript6";
 import { expect, test } from "vitest";
 
 test("TypeScript resolves imported component props", () => {

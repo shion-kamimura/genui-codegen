@@ -14,7 +14,7 @@ pnpm run test
 
 Each command runs independently as a separate CI job. Type checking uses TypeScript, formatting and linting use Biome, and tests use Vitest.
 
-TypeScript 6 supplies the JavaScript Compiler API exercised by the imported-props fixture.
+TypeScript 7 runs the CLI type check. The imported-props fixture uses the JavaScript Compiler API from the official `@typescript/typescript6` compatibility package.
 
 Pull request CI also checks whitespace in the committed diff. Fetch the latest base branch to run that check locally.
 
