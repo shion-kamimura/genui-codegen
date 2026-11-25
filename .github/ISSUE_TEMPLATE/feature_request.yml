@@ -1,0 +1,17 @@
+name: Feature request
+description: Propose a change to support a developer workflow.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and use case
+      description: Describe what you are trying to do and where the current workflow falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe what would satisfy the request. Include a concrete example or proposed approach if you have one.
+    validations:
+      required: true

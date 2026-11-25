@@ -1,0 +1,24 @@
+name: Bug report
+description: Report unexpected behavior with steps to reproduce it.
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest example you can share, including the command you ran and any relevant input files.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: Describe what you expected and what happened. Include relevant output or diagnostics.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Include the genui-codegen version or commit and relevant Node.js, operating system, or framework versions.
+    validations:
+      required: true
