@@ -1,8 +1,22 @@
 # Contributing
 
-Clone the repository and create a branch from `main`. Git is sufficient for the current documentation-stage repository.
+Clone the repository and create an English-named branch from `main`. Use Node.js 26 (the version in `.nvmrc`) and the pnpm version pinned in `package.json`. If you use nvm, run `nvm install` to select the project version.
 
-Run the same whitespace check used in pull request CI before opening a pull request. Fetch the latest base branch first.
+Install dependencies from the lockfile and run the checks for your change.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm run format
+pnpm run lint
+pnpm run typecheck
+pnpm run test
+```
+
+Each command runs independently as a separate CI job. Type checking uses TypeScript, formatting and linting use Biome, and tests use Vitest.
+
+TypeScript 6 supplies the JavaScript Compiler API exercised by the imported-props fixture.
+
+Pull request CI also checks whitespace in the committed diff. Fetch the latest base branch to run that check locally.
 
 ```sh
 git fetch origin main
